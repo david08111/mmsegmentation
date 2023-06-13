@@ -60,7 +60,7 @@ class BaseSegmentor(BaseModel, metaclass=ABCMeta):
     def forward(self,
                 inputs: Tensor,
                 data_samples: OptSampleList = None,
-                mode: str = 'tensor') -> ForwardResults:
+                mode: str = 'predict') -> ForwardResults:
         """The unified entry for a forward process in both training and test.
 
         The method should accept three modes: "tensor", "predict" and "loss":
